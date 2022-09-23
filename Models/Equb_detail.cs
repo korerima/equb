@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace equb.Models
 {
@@ -16,6 +17,7 @@ namespace equb.Models
         public string status { get; set; }
         public string password { get; set; }
         public int number_of_users { get; set; }
+        [Column(TypeName = "decimal(5, 2)")]
         public decimal amount { get; set; }
         public DateTime start_date { get; set; }
         public DateTime end_date { get; set; }
