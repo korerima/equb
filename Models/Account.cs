@@ -11,6 +11,7 @@ namespace equb.Models
         public decimal balance { get; set; }
         public int cust_id { get; set; }
         public Customer Customer { get; set; }
+        public int sth_test { get; set;}
 
     }
 }
