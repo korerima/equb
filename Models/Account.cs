@@ -10,12 +10,17 @@ namespace equb.Models
     public class Account
     {
         [Key]
+        [Display(Name ="Account Number")]
         public int account_id { get; set; }
-        [Column(TypeName = "decimal(5, 2)")]
-        public decimal balance { get; set; }
+
+        [Required(ErrorMessage = "Please enter the amount")]
+        [DataType(DataType.Currency)]
+        [Range(0.00, 1000000.00, ErrorMessage = "The maximum amount is 1,000,000 ETB")]
+        public float? balance { get; set; }
+
+        [Display(Name = "User ID")]
         public int cust_id { get; set; }
         public Customer Customer { get; set; }
-        public int sth_test { get; set;}
 
     }
 }
