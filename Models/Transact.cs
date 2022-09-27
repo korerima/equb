@@ -34,5 +34,7 @@ namespace equb.Models
         [Display(Name ="User ID")]
         public int cust_id { get; set; }
         public Customer Customer { get; set; }
+
+        //try sth
     }
 }
