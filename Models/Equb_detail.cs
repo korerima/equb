@@ -53,7 +53,8 @@ namespace equb.Models
         public DateTime end_date { get; set; }
 
         [Display(Name = "User ID")]
-        public int cust_id { get; set; }
+        [ForeignKey("Customer")]
+        public int? cust_id { get; set; }
         public Customer Customer { get; set; }
 
 

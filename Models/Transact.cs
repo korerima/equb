@@ -32,6 +32,7 @@ namespace equb.Models
         public DateTime time { get; set; }
 
         [Display(Name ="User ID")]
+        [ForeignKey("Customer")]
         public int cust_id { get; set; }
         public Customer Customer { get; set; }
 

@@ -14,12 +14,14 @@ namespace equb.Models
         public int equb_order_id { get; set; }
 
         [Display(Name = "User ID")]
-        public int cust_id { get; set; }
+        [ForeignKey("Customer")]
+        public int? cust_id { get; set; }
         public Customer Customer { get; set; }
 
         [Display(Name = "Equb ID")]
-        public int equb_id { get; set; }
-        public Equb_detail Equb_Detail { get; set; }
+        [ForeignKey("Equb_detail")]
+        public int? equb_id { get; set; }
+        public Equb_detail Equb_detail { get; set; }
 
         [Display(Name = "Order Number")]
         [Range(0.00, 50.00, ErrorMessage = "The order placement should't be greater than 50 and less than 0")]
